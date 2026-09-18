@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Happy Birthday ❤️</title>
+    <title>Special Birthday 🎂</title>
 
     <style>
         * {
@@ -17,168 +17,177 @@
 
         body {
             min-height: 100vh;
-            background: linear-gradient(135deg, #160b20, #3b102f, #180b25);
-            color: white;
-            overflow-x: hidden;
-        }
-
-        /* Hiasan hati */
-        .heart {
-            position: fixed;
-            color: #ff6b9d;
-            font-size: 20px;
-            animation: jatuh 7s linear infinite;
-            top: -30px;
-            z-index: 1;
-        }
-
-        @keyframes jatuh {
-            0% {
-                transform: translateY(-50px) rotate(0deg);
-                opacity: 1;
-            }
-
-            100% {
-                transform: translateY(110vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        .container {
-            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 30px 15px;
-            position: relative;
-            z-index: 2;
+            background: linear-gradient(135deg, #05070d, #101827, #05070d);
+            color: white;
+            overflow: hidden;
         }
 
+        /* STIKER LUCU */
+        .sticker {
+            position: absolute;
+            font-size: 45px;
+            animation: melayang 3s ease-in-out infinite;
+        }
+
+        .s1 {
+            top: 8%;
+            left: 10%;
+        }
+
+        .s2 {
+            top: 15%;
+            right: 10%;
+            animation-delay: 1s;
+        }
+
+        .s3 {
+            bottom: 12%;
+            left: 12%;
+            animation-delay: 2s;
+        }
+
+        .s4 {
+            bottom: 10%;
+            right: 12%;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes melayang {
+            0%, 100% {
+                transform: translateY(0) rotate(-5deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+
+        /* KARTU */
         .card {
-            width: 100%;
-            max-width: 700px;
-            padding: 45px 30px;
+            width: 90%;
+            max-width: 500px;
+            padding: 40px 30px;
             text-align: center;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255,255,255,0.15);
+
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255,255,255,0.2);
             border-radius: 30px;
+
             backdrop-filter: blur(15px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+
+            box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+
+            position: relative;
+            z-index: 5;
         }
 
-        .small {
-            color: #ff9fbd;
-            font-size: 17px;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-        }
-
-        h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-            color: #fff;
-            text-shadow: 0 0 20px #ff4f91;
-        }
-
-        h2 {
-            color: #ff8fb5;
-            font-size: 28px;
-            margin-bottom: 25px;
-        }
-
-        .cake {
+        .emoji {
             font-size: 80px;
             animation: goyang 2s infinite;
-            margin: 20px 0;
+            margin-bottom: 10px;
         }
 
         @keyframes goyang {
             0%,100% {
                 transform: rotate(-5deg);
             }
+
             50% {
                 transform: rotate(5deg);
             }
         }
 
-        .message {
-            line-height: 1.8;
-            font-size: 17px;
-            color: #f8eaf0;
-            margin: 20px auto;
-            max-width: 570px;
+        h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px #1769aa;
         }
 
-        .highlight {
-            color: #ff8fb5;
-            font-weight: bold;
+        .subtitle {
+            color: #9ccaff;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #dcecff;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            border-radius: 15px;
+            border: 1px solid #5798d9;
+            background: rgba(0,0,0,0.3);
+            color: white;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input:focus {
+            box-shadow: 0 0 15px rgba(87,152,217,0.5);
         }
 
         button {
-            margin-top: 25px;
-            padding: 14px 28px;
-            border: none;
+            margin-top: 20px;
+            padding: 14px 30px;
+            border: 1px solid #5798d9;
             border-radius: 50px;
-            background: linear-gradient(45deg, #ff477e, #ff8fab);
+
+            background: linear-gradient(45deg, #174a7e, #2878b8);
+
             color: white;
             font-size: 16px;
             font-weight: bold;
+
             cursor: pointer;
-            box-shadow: 0 8px 25px rgba(255, 71, 126, 0.4);
+
             transition: 0.3s;
         }
 
         button:hover {
             transform: scale(1.08);
+            background: linear-gradient(45deg, #23669e, #3594d3);
         }
 
-        #surprise {
-            display: none;
-            margin-top: 30px;
-            padding: 25px;
-            border-radius: 20px;
-            background: rgba(255,255,255,0.08);
-            animation: muncul 1s ease;
-        }
-
-        @keyframes muncul {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .love {
-            font-size: 35px;
-            margin-top: 20px;
+        #pesan {
+            margin-top: 15px;
+            color: #ff9da9;
+            font-size: 14px;
         }
 
         .footer {
-            margin-top: 30px;
-            font-size: 14px;
-            color: #cdbbc3;
+            margin-top: 25px;
+            color: #8995a5;
+            font-size: 13px;
         }
 
-        @media(max-width:600px) {
-            h1 {
-                font-size: 36px;
+        /* BINTANG */
+        .star {
+            position: absolute;
+            color: white;
+            font-size: 18px;
+            animation: jatuh 6s linear infinite;
+        }
+
+        @keyframes jatuh {
+            from {
+                transform: translateY(-100px);
+                opacity: 0;
             }
 
-            h2 {
-                font-size: 23px;
+            20% {
+                opacity: 1;
             }
 
-            .cake {
-                font-size: 65px;
-            }
-
-            .card {
-                padding: 35px 20px;
+            to {
+                transform: translateY(110vh);
+                opacity: 0;
             }
         }
     </style>
@@ -186,140 +195,92 @@
 
 <body>
 
-    <!-- Hati yang berjatuhan -->
-    <div class="heart" style="left:10%; animation-delay:0s;">♥</div>
-    <div class="heart" style="left:25%; animation-delay:2s;">♥</div>
-    <div class="heart" style="left:40%; animation-delay:4s;">♥</div>
-    <div class="heart" style="left:60%; animation-delay:1s;">♥</div>
-    <div class="heart" style="left:75%; animation-delay:3s;">♥</div>
-    <div class="heart" style="left:90%; animation-delay:5s;">♥</div>
+    <!-- STIKER LUCU -->
+    <div class="sticker s1">🎈</div>
+    <div class="sticker s2">🎁</div>
+    <div class="sticker s3">🧸</div>
+    <div class="sticker s4">💗</div>
 
-    <div class="container">
+    <!-- BINTANG -->
+    <div class="star" style="left:20%; animation-delay:1s;">✦</div>
+    <div class="star" style="left:35%; animation-delay:3s;">✦</div>
+    <div class="star" style="left:55%; animation-delay:0s;">✦</div>
+    <div class="star" style="left:75%; animation-delay:2s;">✦</div>
+    <div class="star" style="left:90%; animation-delay:4s;">✦</div>
 
-        <div class="card">
+    <!-- KARTU -->
+    <div class="card">
 
-            <div class="small">
-                FOR SOMEONE SPECIAL ❤️
-            </div>
+        <div class="emoji">
+            🎂
+        </div>
 
-            <h1>Happy Birthday!</h1>
+        <h1>Hi, Birthday Boy! 🤍</h1>
 
-            <!-- GANTI NAMA PACAR DI SINI -->
-            <h2>Untuk Kamu, Sayangku 🤍</h2>
+        <p class="subtitle">
+            Sebelum masuk, jawab satu pertanyaan kecil dulu... 
+            <br>
+            Kapan tanggal ulang tahun kamu? 👀🎁
+        </p>
 
-            <div class="cake">
-                🎂
-            </div>
+        <label for="tanggal">
+            🎀 Masukkan tanggal ulang tahun
+        </label>
 
-            <p class="message">
-                Selamat ulang tahun untuk seseorang yang sangat berarti
-                dalam hidup aku. 🥺❤️
-                <br><br>
+        <input type="date" id="tanggal">
 
-                Di hari spesial kamu ini, aku cuma mau bilang
-                <span class="highlight">
-                    terima kasih sudah hadir di hidup aku.
-                </span>
+        <button onclick="cekTanggal()">
+            💌 Buka Surprise
+        </button>
 
-                Terima kasih sudah menjadi tempat aku cerita,
-                tempat aku bercanda, dan seseorang yang selalu berhasil
-                membuat hari-hari aku terasa lebih berwarna.
-                <br><br>
+        <p id="pesan"></p>
 
-                Semoga di umur kamu yang sekarang,
-                semua hal baik datang satu per satu.
-                Semoga langkah kamu selalu dimudahkan,
-                rezeki kamu dilancarkan,
-                dan semua impian yang kamu kejar bisa tercapai.
-                <br><br>
-
-                Aku mungkin nggak selalu bisa memberikan sesuatu
-                yang sempurna, tapi aku berharap aku bisa selalu ada
-                untuk menemani kamu melewati banyak hal.
-                <br><br>
-
-                <span class="highlight">
-                    Jangan lupa bahagia, jangan lupa jaga diri,
-                    dan jangan pernah merasa sendirian.
-                </span>
-                ❤️
-            </p>
-
-            <button onclick="kejutan()">
-                💌 Klik untuk kejutan
-            </button>
-
-            <div id="surprise">
-
-                <h2>💗 Satu pesan lagi...</h2>
-
-                <p class="message">
-                    Aku nggak tahu akan sejauh apa perjalanan kita nanti,
-                    tapi untuk sekarang aku cuma ingin menikmati
-                    setiap momen yang kita punya.
-                    <br><br>
-
-                    Semoga tahun ini menjadi tahun yang penuh
-                    kebahagiaan buat kamu.
-                    <br><br>
-
-                    Dan kalau boleh egois sedikit...
-                    <br><br>
-
-                    <span class="highlight">
-                        aku mau tetap jadi salah satu alasan kamu tersenyum. ❤️
-                    </span>
-                    <br><br>
-
-                    Happy Birthday, sayang.
-                    <br>
-                    Semoga panjang umur dan selalu bahagia. 🥺❤️
-                </p>
-
-                <div class="love">
-                    I Love You ❤️
-                </div>
-
-            </div>
-
-            <div class="footer">
-                Made with ❤️ especially for you
-            </div>
-
+        <div class="footer">
+            Ada sesuatu yang spesial menunggumu... ✨
         </div>
 
     </div>
 
     <script>
 
-        function kejutan() {
+        function cekTanggal() {
 
-            const surprise = document.getElementById("surprise");
+            // GANTI TANGGAL DI SINI
+            // Contoh: 19 september 2005
+            const tanggalBenar = "2005-09-19";
 
-            surprise.style.display = "block";
+            const tanggalInput = document.getElementById("tanggal").value;
+            const pesan = document.getElementById("pesan");
 
-            // Membuat hati tambahan
-            for (let i = 0; i < 25; i++) {
+            if (tanggalInput === "") {
 
-                const heart = document.createElement("div");
+                pesan.innerHTML = "Tanggalnya diisi dulu dong 😭🎂";
 
-                heart.innerHTML = "❤️";
-
-                heart.className = "heart";
-
-                heart.style.left = Math.random() * 100 + "%";
-
-                heart.style.animationDuration =
-                    (3 + Math.random() * 4) + "s";
-
-                document.body.appendChild(heart);
-
+                return;
             }
 
+            if (tanggalInput === tanggalBenar) {
+
+                pesan.style.color = "#8cffc1";
+                pesan.innerHTML = "Benar! Surprise-nya dibuka... 💗✨";
+
+                setTimeout(function() {
+
+                    window.location.href = "utama.html";
+
+                }, 1000);
+
+            } else {
+
+                pesan.style.color = "#ff9da9";
+                pesan.innerHTML = "Hmm... tanggalnya salah 😝 Coba ingat lagi! 🎂";
+
+            }
         }
 
     </script>
+    
+
 
 </body>
 </html>
-```
